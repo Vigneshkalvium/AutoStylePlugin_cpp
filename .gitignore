@@ -1,0 +1,4 @@
+build/
+*.plugin
+*.pluginbundle
+*.DS_Store

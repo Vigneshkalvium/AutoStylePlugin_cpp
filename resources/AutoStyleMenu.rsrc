@@ -1,0 +1,4 @@
+Menu "Edit"
+{
+    Item "Auto Style" // Triggers AutoStyleActionComponent
+}
