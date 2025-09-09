@@ -1,111 +1,101 @@
-# Auto Style Plugin for Adobe InDesign
 
-## Overview
+# AutoStylePlugin (Adobe InDesign SDK – C++ Plugin)
 
-Auto Style Plugin is a cross-platform Adobe InDesign plugin developed in C++ using the InDesign SDK. It enables users to automatically apply predefined text styles (font, size, and color) to selected text with a single click from the "Edit > Auto Style" menu option. This project demonstrates strong command over C++, object-oriented programming, debugging, and plugin development with the InDesign SDK.
+## 📌 Overview
+**AutoStylePlugin** is a cross-platform Adobe InDesign plugin written in **C++** using the **InDesign SDK**.  
+It introduces a simple but extensible feature under **Edit → Auto Style**, which automatically applies a predefined text style (font, size, and color) to selected text.  
 
-This plugin was developed as part of a portfolio to target the Adobe InDesign SDK Developer Internship at Inbetween Software Development Pvt Ltd, showcasing skills like cross-platform plugin development, debugging, and integration with complex SDKs.
+This project demonstrates:
+- Practical usage of the **InDesign SDK**
+- **Object-oriented design principles** in C++
+- **Cross-platform plugin development** (Windows & macOS)
+- Debugging, logging, and modular plugin architecture
 
----
-
-## Features
-
-- Apply a predefined text style (font: Arial, size: 14pt, color: Black) automatically to selected text.
-- Simple menu integration under *Edit > Auto Style* in InDesign.
-- Modular and extensible design supporting future addition of multiple style presets.
-- Cross-platform compatibility (Windows and Mac).
-- Built-in debug logging to trace operations during plugin execution.
+It was built as part of my portfolio for the **Adobe InDesign SDK Developer Intern** role at *Inbetween Software Development Pvt Ltd*.
 
 ---
 
-## Technology Stack
-
-- Language: C++
-- Adobe InDesign SDK for plugin APIs
-- Object-Oriented Programming principles: encapsulation, inheritance, polymorphism
-- Cross-platform build system (CMake recommended)
+## ✨ Features
+- One-click **Auto Style** command inside InDesign.
+- Applies the following preset:
+  - **Font**: Arial  
+  - **Size**: 14 pt  
+  - **Color**: Black
+- **Cross-platform ready** (Windows + macOS).
+- Extensible design → can easily add multiple style presets in the future.
+- Built-in **debug logging** for development and troubleshooting.
 
 ---
 
-## Project Structure
-
+## 📂 Project Structure
+```
 AutoStylePlugin/
-├── src/ # Source code
-│ ├── PluginMain.cpp
-│ ├── AutoStyleActionComponent.h/.cpp
-│ ├── TextStylePreset.h/.cpp
-│ └── DebugLogger.h # Debug helper
-├── resources/ # UI and menu resource files
-│ └── AutoStyleMenu.rsrc
+├── src/
+│   ├── PluginMain.cpp               # Plugin entry point
+│   ├── AutoStyleActionComponent.h/.cpp  # Handles menu action
+│   ├── TextStylePreset.h/.cpp       # Encapsulates style settings
+│   └── DebugLogger.h                # Debugging utility
+├── resources/
+│   └── AutoStyleMenu.rsrc           # Menu resource definition
 ├── README.md
 ├── LICENSE
 └── .gitignore
-
-
----
-
-## Setup and Build Instructions
-
-1. **Prerequisites:**
-   - Adobe InDesign SDK installed (matching your InDesign version)
-   - C++ compiler (Visual Studio for Windows, Xcode for Mac)
-   - CMake (optional) or native build tools
-
-2. **Configure:**
-   - Set SDK path and environment variables as required by InDesign SDK
-
-3. **Build:**
-   - Use provided `CMakeLists.txt` or build scripts to compile the plugin on Windows or Mac.
-   - Generates `.plugin` (Mac) or `.pluginbundle` (Windows) files for InDesign plugin deployment.
-
-4. **Deploy:**
-   - Copy the built plugin to InDesign's Plugins folder.
-   - Restart Adobe InDesign.
-
-5. **Use:**
-   - Open or create a document in InDesign.
-   - Select text.
-   - From menu, choose *Edit > Auto Style*.
-   - Selected text will receive the configured style automatically.
+```
 
 ---
 
-## How It Works
+## ⚙️ Setup & Build Instructions
 
-- The plugin listens for the "Auto Style" command from the menu.
-- It retrieves the selected text range using InDesign SDK's selection interfaces.
-- Applies the predefined text style (font, size, color) iteratively on the selected text.
-- Uses OOP abstractions for maintainability and potential extensions.
-- Debug logs output progress and errors for easy troubleshooting.
+### Prerequisites
+- Adobe InDesign + InDesign SDK (matching version)
+- C++ compiler:
+  - Windows: Visual Studio or MinGW
+  - macOS: Xcode
+- (Optional) **CMake** for build automation
 
----
-
-## Contribution and Customization
-
-- Extend the `TextStylePreset` class to add more styles like Heading, Body, and Highlight.
-- Enhance UI resource files to support multiple presets from the menu.
-- Integrate advanced error handling and user notifications.
-- Build tests for various InDesign versions and platforms.
-
----
-
-## Why This Project
-
-This plugin aligns precisely with the internship role at Inbetween Software Development Pvt Ltd, exemplifying:
-
-- Strong knowledge of **C++ and OOP** concepts.
-- Experience with **cross-platform plugin development** for Windows and Mac.
-- Practical use of the **InDesign SDK** API interfaces.
-- Ability to **debug and optimize** software.
-- Clean and maintainable code ready for **team-based development** and code reviews.
+### Build Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Vigneshkalvium/AutoStylePlugin_cpp.git
+   ```
+2. Open project in your preferred IDE (or use CMake).
+3. Configure the **InDesign SDK path** in your project settings.
+4. Build the plugin → outputs:
+   - **Windows**: `.plugin`
+   - **macOS**: `.pluginbundle`
+5. Copy the built plugin into InDesign’s **Plugins folder**.
+6. Restart InDesign.
 
 ---
 
-## License
-
-Include your preferred license here (e.g., MIT License).
+## 🚀 Usage
+1. Launch Adobe InDesign with the plugin installed.
+2. Select any text in your document.
+3. Go to **Edit → Auto Style**.
+4. The selected text will be automatically styled (Arial, 14pt, Black).
 
 ---
 
+## 🔧 Future Improvements
+- Add **multiple style presets** with a user selection dialog.
+- Create a **UI panel** for custom style configuration.
+- Save/load user preferences.
+- Add automated tests for style application.
 
+---
 
+## 📚 Skills Demonstrated
+- Advanced **C++ programming** (OOP, modular design).
+- **Cross-platform plugin development** (Windows & macOS).
+- Debugging & problem-solving (via custom logger).
+- Familiarity with **Adobe InDesign SDK**.
+- Writing clean, extensible, and team-friendly code.
+
+---
+
+## 📝 License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
+⚡ *This project was created as a practical demonstration of my ability to work with the Adobe InDesign SDK in C++ and aligns with the requirements of the InDesign SDK Developer Intern role.*  
