@@ -11,8 +11,6 @@ This project demonstrates:
 - **Cross-platform plugin development** (Windows & macOS)
 - Debugging, logging, and modular plugin architecture
 
-It was built as part of my portfolio for the **Adobe InDesign SDK Developer Intern** role at *Inbetween Software Development Pvt Ltd*.
-
 ---
 
 ## ✨ Features
@@ -90,12 +88,8 @@ AutoStylePlugin/
 - Debugging & problem-solving (via custom logger).
 - Familiarity with **Adobe InDesign SDK**.
 - Writing clean, extensible, and team-friendly code.
-
----
-
-## 📝 License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
+- 
 ---
 
 ⚡ *This project was created as a practical demonstration of my ability to work with the Adobe InDesign SDK in C++ and aligns with the requirements of the InDesign SDK Developer Intern role.*  
+
